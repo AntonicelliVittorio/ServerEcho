@@ -10,7 +10,8 @@ import java.net.ServerSocket;
 
 public class TCPServer{
     public static void main(String[] args)throws IOException{
-        ServerSocket ss = new ServerSocket(2000);
+        int porta = 6000;
+        ServerSocket ss = new ServerSocket(porta);
         while(true){
             new ServerThread(ss.accept()).start();
         }
